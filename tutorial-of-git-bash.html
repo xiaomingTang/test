@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="tang" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<title>tutorial-of-git-bash</title>
+
+	<link rel="shortcut icon" type="image/ico" href="E:\\tang\ico\icon_head2.ico" />
+	<link rel="stylesheet" type="text/css" href="tutorial-of-git-bash.css" />
+</head>
+<body>
+	<div id="tutorial-of-git-bash">
+		<div>
+			<h1>github客户端文件上传</h1>
+			<h1>简易教程</h1>
+			<h2>说明</h2>
+			<p>本教程仅针对<span class="special">github</span>windows客户端通过<span class="special">Bash</span>命令行上传文件</p>
+			<h2>事前工作</h2>
+			<ul>
+				<li>
+					<p>网页端新建仓库(repository)</p>
+					<p><a href="http://jingyan.baidu.com/article/b907e627d3c1d546e7891ceb.html" target="_blank">点击查看怎么新建仓库</a></p>
+					<p>这里，我将新仓库命名为"test"</p>
+				</li>
+				<li>
+					<p>安装github客户端</p>
+					<p><a href="https://desktop.github.com/" target="_blank">点击进入github客户端下载页面</a></p>
+					<p>安装好客户端之后，我们应该有如右图两个应用</p>
+					<p><img src="img/link.png" alt="github桌面图标" /></p>
+					<p><span>前一个是图形化界面应用,后一个是命令行</span></p>
+					<p>本教程就是专门针对后一个命令行中<span class="special">Bash</span>命令上传</p>
+				</li>
+				<li>
+					<p>建议将文件夹选项中的"显示隐藏文件"打开</p>
+					<p><a href="http://jingyan.baidu.com/article/e73e26c0f5981124adb6a7ad.html" target="_blank">点击查看怎么显示隐藏文件</a></p>
+				</li>
+				<li>
+					<p>建议设置一个专用的文件夹,专门存放需上传到github上的文件</p>
+					<p>这里，我用的是<span class="special">D:\我的文档\GitHub</span></p>
+					<p>可以将命令行的起始位置设置为该文件夹</p>
+					<p>设置步骤为: 右键桌面上的<span class="special">Git Shell</span>图标 &gt;&gt; 属性 &gt;&gt; 选择"快捷方式"选项卡 &gt;&gt; 修改起始位置并确认</p>
+				</li>
+				<li>
+					<p>命令行有4中脚本语言<span class="special">cmd</span><span class="special">Git Bash</span><span class="special">PowerShell</span><span class="special">Custom</span></p>
+					<p>本教程介绍的是<span class="special">Git Bash</span>，因此需要将命令行语言修改为<span class="special">Git Bash</span></p>
+					<p>方法步骤是: 打开<span class="special">github图形界面</span> &gt;&gt; 点击右上角的齿轮(设置) &gt;&gt; 选择option.. &gt;&gt; 修改默认Default Shell为<span class="special">Git Bash</span>并确认</p>
+				</li>
+			</ul>
+			<h2>Git Bash上传</h2>
+			<ul>
+				<li>
+					<p>将你想要上传的文件装在一个文件夹中，整体复制到 之前设置的 专用文件夹<span class="special">D:\我的文档\GitHub</span>下</p>
+				</li>
+				<li>
+					<p>打开git命令行</p>
+				</li>
+				<li>
+					<p>依次输入 一共6行命令</p>
+					<ul><a href="" target="_blank"></a>
+						<li>
+							<p><a href="http://man.linuxde.net/cd" target="_blank">$ cd</a> <span class="special">你的文件夹的名字</span></p>
+							<p>用于更改当前目录 <span class="special">D:\我的文档\GitHub</span> &gt;&gt; <span class="special">D:\我的文档\GitHub\你的文件夹</span>
+						</li>
+						<li>
+							<p><a href="http://www.cnblogs.com/mengdd/p/4153773.html" target="_blank">$ git init</a></p>
+							<p>仓库的初始化,会自动在你的文件夹下新建一个<span class="special">.git</span>隐藏文件夹</p>
+						</li>
+						<li>
+							<p><a href="http://www.cnblogs.com/mengdd/p/4153773.html" target="_blank">$ git add .</a></p>
+							<p>将该目录下所有文件添加到缓存，注意：最后面的点不能省略,那个点表示(当前目录下)所有文件</p>
+						</li>
+						<li>
+							<p><a href="http://www.cnblogs.com/mengdd/p/4153773.html" target="_blank">$ git commit</a></p>
+							<p>将缓存添加到本地仓库</p>
+						</li>
+						<li>
+							<p><a href="http://www.cnblogs.com/mengdd/p/4153773.html" target="_blank">$ git remote add</a> <span class="special">你自己随便取什么代号</span> git@github.com:<span class="special">你的github用户名</span>/<span class="special">github线上仓库的名字</span>.git</p>
+							<p>相当于给远程(线上)仓库取个简称，方便以后使用</p>
+						</li>
+						<li>
+							<p><a href="http://www.cnblogs.com/mengdd/p/4153773.html" target="_blank">$ git push</a> <span class="special">你刚取的代号</span> master</p>
+							<p>将本地仓库推送到远程(线上)仓库</p>
+						</li>
+					</ul>
+				
+				</li>
+			</ul>
+			<h2>整体效果</h2>
+			<p>点击可切换大小图</p>
+			<img class="small-img" src="img/test.png" alt="整体效果,难道图片没加载出来???" title="点击可切换大图/小图" />
+		</div>
+				
+	
+	</div>
+	
+	
+	<script type="text/javascript" src="tutorial-of-git-bash.js" ></script>
+</body>
+</html>

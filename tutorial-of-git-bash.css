@@ -1,0 +1,30 @@
+body{
+	position:relative;
+}
+#tutorial-of-git-bash{
+	width:70%;
+	padding:1em;
+	margin:auto;
+	background-color:#ba8;
+	line-height:2em;
+}
+.special{
+	margin:0 4px;
+	padding:0 2px;
+	background-color:#eee;
+	color:#080;
+	border:1px solid #ddd;
+	border-radius:5px;
+}
+.big-img{
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+}
+.small-img{
+	width:50%;
+}
+h1{
+	text-align:center;
+}
